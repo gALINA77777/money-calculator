@@ -21,3 +21,5 @@ def get_summary(incomes, expenses):
         "expense": total_expense,
         "balance": total_income - total_expense,
     }
+
+

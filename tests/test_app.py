@@ -25,4 +25,4 @@ def test_get_summary_calculates_correctly():
     assert result["income"] == 1500
     assert result["expense"] == 300
     assert result["balance"] == 1200
-    
+
