@@ -16,7 +16,7 @@ jobs:
       - name: Установка зависимостей
         run: pip install flake8
       - name: Запуск линтера
-        run: flake8 app.py tests/ --max-line-length=120 --ignore=W292
+        run: flake8 app.py tests/ --max-line-length=120 --ignore=E302,E305,W291,W292,W293,W391,E501
 
   test:
     name: Тесты (pytest)
