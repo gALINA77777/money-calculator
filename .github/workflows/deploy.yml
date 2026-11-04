@@ -34,22 +34,10 @@ jobs:
       - name: Запуск тестов
         run: python -m pytest -v
 
-  build-docker:
-    name: Сборка Docker-образа
-    runs-on: self-hosted
-    needs: test
-    steps:
-      - name: Сборка образа
-        run: |
-          cd /opt/money-calculator
-          git fetch origin
-          git reset --hard origin/main
-          docker build -t money-calculator:latest .
-
   deploy:
     name: Деплой на продуктовый сервер
     runs-on: self-hosted
-    needs: build-docker
+    needs: test
     steps:
       - name: Обновление кода на сервере
         run: |
