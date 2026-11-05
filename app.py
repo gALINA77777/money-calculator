@@ -2,7 +2,7 @@ def add_income(balance, amount):
     """Добавить доход к балансу."""
     if amount <= 0:
         raise ValueError("Сумма дохода должна быть положительной")
-    return balance + amount
+    return balance - amount
 
 
 def add_expense(balance, amount):
